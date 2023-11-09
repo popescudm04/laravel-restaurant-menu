@@ -27,10 +27,8 @@ class loginController extends Controller
             ->first();
 
         if ($admin) {
-            // Credentials are correct
             return redirect('admin');
         } else {
-            // Credentials are incorrect
             return back()->withErrors(['email' => 'Invalid email or password']);
         }
     }

@@ -12,7 +12,7 @@
 <body>
 
     <div class="text-center my-2"><button class="btn btn-primary" id="adminButton">Admin</button></div>
-    <div class="text-center my-2"><button class="btn btn-primary">Customer</button></div>
+    <div class="text-center my-2"><button class="btn btn-primary" onclick="window.location='{{ URL::route('menu') }}'">Customer</button></div>
 
     <!-- Login Modal -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">

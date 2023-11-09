@@ -1,1 +1,7 @@
+#wrapper {
+    height: 100vh;
+}
 
+#page-content-wrapper {
+    height: fit-content;
+}
