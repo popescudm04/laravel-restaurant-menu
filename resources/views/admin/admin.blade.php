@@ -11,9 +11,14 @@
 </head>
 
 <body>
+    <div class="d-flex" id="wrapper">
+        @include('layouts.sidenav')
+        <div class="px-0 container-fluid" id="page-content-wrapper">
+            @include('layouts.topnav')
+            <div class="container-fluid">admin</div>
+        </div>
 
-    @include('layouts.navigation')
-    
+    </div>
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

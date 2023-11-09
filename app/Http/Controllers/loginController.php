@@ -4,18 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Admin;
-use Illuminate\Support\Facades\View;
 
 
 
 class loginController extends Controller
 {
-    public function showLoginForm()
-    {
-        $loginForm = View::make('login')->render();
-        return response()->json(['loginForm' => $loginForm]);
-    }
-
 
     public function login(Request $request)
     {
