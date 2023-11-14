@@ -4,4 +4,12 @@ $(document).ready(function () {
         $('#loginModal').modal('show');
     });
 
+    $('#categoriesButton').on('click', function () {
+        if($('#categoriesDiv').is(":hidden"))
+            $('#categoriesDiv').show();
+        else $('#categoriesDiv').hide();
+    });
+
+        
+
 });

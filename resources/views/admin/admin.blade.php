@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
+    <title>Admin Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 
@@ -15,7 +15,9 @@
         @include('layouts.sidenav')
         <div class="px-0 container-fluid" id="page-content-wrapper">
             @include('layouts.topnav')
-            <div class="container-fluid">admin</div>
+            <div class="container-fluid">
+                @include('admin.categories')
+            </div>
         </div>
 
     </div>
