@@ -24,5 +24,6 @@ class loginController extends Controller
         } else {
             return back()->withErrors(['email' => 'Invalid email or password']);
         }
+        
     }
 }

@@ -14,9 +14,13 @@
     <div class="d-flex" id="wrapper">
         @include('layouts.sidenav')
         <div class="px-0 container-fluid" id="page-content-wrapper">
-            @include('layouts.topnav')
-            <div class="container-fluid">
+            <div id="topnav">
+                @include('layouts.topnav')
+            </div>
+
+            <div id="views">
                 @include('admin.categories')
+                @include('admin.addCategories')
             </div>
         </div>
 
