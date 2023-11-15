@@ -30,8 +30,11 @@ Route::post('/login', [loginController::class, 'login'])->name('login');
 
 Route::post('/addCategory', [adminController::class, 'addCategory'])->name('addCategory');
 
-Route::get('/admin', [adminController::class,'getCategory']);
+Route::get('/deleteCategory/{id}',[adminController::class,'deleteCategory'])->name('deleteCategory');
 
-//Route::get('/admin', function () {
-//    return view('admin.dashboard');
-//})->name('admin');
+Route::get('/categories', [adminController::class,'getCategory'])->name('categories');
+
+
+Route::get('/dashboard', function () {
+    return view('admin.dashboard');
+})->name('dashboard');

@@ -10,7 +10,6 @@ class adminController extends Controller
 {
     public function addCategory(Request $request)
     {
-        print_r($request->all());
         $category = new Category;
         $category->name = $request->categoryName;
 
@@ -31,6 +30,13 @@ class adminController extends Controller
     public function getCategory(Request $request)
     {
         $data = Category::all();
-        return view('admin.dashboard',['data'=>$data]);
+        return view('admin.categories',['data'=>$data]);
     }
+
+    public function deleteCategory(Request $request){
+        $id = $request->id;
+        Category::where('id', $id)->delete();
+        return redirect()->back();
+
+      }
 }

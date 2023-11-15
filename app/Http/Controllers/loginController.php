@@ -20,7 +20,7 @@ class loginController extends Controller
             ->first();
 
         if ($admin) {
-            return redirect('admin');
+            return redirect('dashboard');
         } else {
             return back()->withErrors(['email' => 'Invalid email or password']);
         }

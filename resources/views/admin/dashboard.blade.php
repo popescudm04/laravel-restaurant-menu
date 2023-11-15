@@ -18,9 +18,9 @@
                 @include('layouts.topnav')
             </div>
 
-            <div id="views">
-                @include('admin.categories')
-                @include('admin.addCategories')
+            <div id="dashboardDiv">
+                Main dashboard
+                
             </div>
         </div>
 
