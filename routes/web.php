@@ -32,6 +32,9 @@ Route::post('/addCategory', [adminController::class, 'addCategory'])->name('addC
 
 Route::get('/deleteCategory/{id}',[adminController::class,'deleteCategory'])->name('deleteCategory');
 
+Route::get('edit-category/{id}', [adminController::class, 'editCategory']);
+Route::post('update-category/{id}', [adminController::class, 'updateCategory'])->name('updateCategory');
+
 Route::get('/categories', [adminController::class,'getCategory'])->name('categories');
 
 

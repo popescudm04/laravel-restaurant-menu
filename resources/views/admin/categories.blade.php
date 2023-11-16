@@ -24,12 +24,12 @@
                     <div class="mt-2 container-fluid">
                         <button type="button" class="btn btn-secondary" id="addCategoryButton">Add category</button>
                     </div>
-                    <ul class="mt-3  list-group mx-2">
+                    <ul class="mt-3  list-group mx-2" id="categoryList">
                         @foreach ($data as $i)
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                 <span class="name">{{ $i->name }}</span>
                                 <div class="">
-                                    <button type="button" class="btn btn-secondary">Edit</button>
+                                    <a href="{{ url('edit-category/'.$i->id) }}" class="btn btn-primary btn-sm">Edit</a>
                                     
                                     <a href="{{ route('deleteCategory', $i->id) }}"><button type="button" class="btn btn-close"></button></a>
                                 </div>

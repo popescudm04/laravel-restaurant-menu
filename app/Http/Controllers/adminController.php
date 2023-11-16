@@ -19,8 +19,6 @@ class adminController extends Controller
 
         $request->image->move('categoryImages', $imagename);
 
-      
-
         $category->image = $imagename;
 
         $category->save();
@@ -39,4 +37,27 @@ class adminController extends Controller
         return redirect()->back();
 
       }
+
+      public function editCategory($id)
+    {
+        $data = Category::find($id);
+        return view('admin.editCategories', compact('data'));
+    }
+
+    public function updateCategory(Request $request, $id)
+    {
+        $data = Category::find($id);
+        $data->name = $request->input('name');
+
+        if($request->hasFile('image')) {
+            $image = $request->image;
+            $filename = time() . "." . $image->getClientOriginalExtension();
+            $image->move('categoryImages', $filename);
+            $data->image = $filename;
+        }
+
+        $data->update();
+        
+        return redirect()->back()->with('status','Category Updated Successfully');
+    }
 }
